@@ -31,20 +31,29 @@
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+.backdrop {
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
 }
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0;
+.backdrop {
+
+    &.is-hidden .modal {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+    }
 }
 
-.backdrop .modal {
+.backdrop {
+
+    & .modal {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
+}
 }
 
 .modal-btn {
@@ -65,16 +74,16 @@
     border-radius: 50%;
 
     cursor: pointer;
+
+    &:hover .btn-close,
+    &:focus .btn-close {
+        fill: var(--color-hover);
+    }
 }
 
 .btn-close {
     fill: currentColor;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-btn:hover .btn-close,
-.modal-btn:focus .btn-close {
-    fill: var(--color-hover);
 }
 
 // form
@@ -139,15 +148,18 @@
     outline: transparent;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--color-hover);
+    }
 }
 
-.form-input:hover,
-.form-input:focus {
-    border: 1px solid var(--color-hover);
-}
+.form-input {
 
-.form-input:focus + .form-icon {
+    &:focus + .form-icon {
     fill: var(--color-hover);
+}
 }
 
 .form-icon {
@@ -172,11 +184,11 @@
     outline: transparent;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form-comments:hover,
-.form-comments:focus {
-    border: 1px solid var(--color-hover);
+    &:hover,
+    &:focus {
+        border: 1px solid var(--color-hover);
+    }
 }
 
 .form-label.comments {
@@ -209,33 +221,39 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked ~ .checkbox-icon {
-    border-color: var(--color-hover);
+.checkbox {
+
+    &:checked ~ .checkbox-icon {
+        border-color: var(--color-hover);
+    }
 }
 
-.checkbox:checked + .custom-checkbox {
-    background-color: #2196f3;
+.checkbox {
+
+    &:checked + .custom-checkbox {
+        background-color: #2196f3;
+    }
 }
 
-.checkbox:focus + .custom-checkbox {
-    border-color: #2196f3;
-}
+.checkbox {
 
-.checkbox-icon {
-    fill: #ffffff;
-    opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus + .custom-checkbox {
+        border-color: #2196f3;
+    }
+    
 }
-
-// .checkbox:checked + .custom-checkbox .checkbox-icon {
-//     opacity: 1;
-// }
 
 .checkbox {
     
     &:checked + .custom-checkbox .checkbox-icon {
             opacity: 1;
         }
+}
+
+.checkbox-icon {
+    fill: #ffffff;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-text {

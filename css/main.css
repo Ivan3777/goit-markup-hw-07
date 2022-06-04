@@ -385,15 +385,15 @@ img {
   cursor: pointer;
 }
 
+.modal-btn:hover .btn-close,
+.modal-btn:focus .btn-close {
+  fill: var(--color-hover);
+}
+
 .btn-close {
   fill: currentColor;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-btn:hover .btn-close,
-.modal-btn:focus .btn-close {
-  fill: var(--color-hover);
 }
 
 .form-title {
@@ -457,8 +457,7 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:hover,
-.form-input:focus {
+.form-input:hover, .form-input:focus {
   border: 1px solid var(--color-hover);
 }
 
@@ -492,8 +491,7 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-comments:hover,
-.form-comments:focus {
+.form-comments:hover, .form-comments:focus {
   border: 1px solid var(--color-hover);
 }
 
@@ -546,15 +544,15 @@ img {
   border-color: #2196f3;
 }
 
+.checkbox:checked + .custom-checkbox .checkbox-icon {
+  opacity: 1;
+}
+
 .checkbox-icon {
   fill: #ffffff;
   opacity: 0;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.checkbox:checked + .custom-checkbox .checkbox-icon {
-  opacity: 1;
 }
 
 .checkbox-text {
@@ -800,9 +798,8 @@ img {
   background-color: #2196f3;
 }
 
-.social-link:hover:hover .social-icon,
-.social-link:hover:focus .social-icon, .social-link:focus:hover .social-icon,
-.social-link:focus:focus .social-icon {
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
   fill: #ffffff;
 }
 
@@ -866,15 +863,15 @@ img {
   border: 1px solid var(--color-hover);
 }
 
+.link-client:hover .icon-client,
+.link-client:focus .icon-client {
+  fill: var(--color-hover);
+}
+
 .icon-client {
   fill: #afb1b8;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-client:hover .icon-client,
-.link-client:focus .icon-client {
-  fill: var(--color-hover);
 }
 
 .footer {
@@ -1157,10 +1154,15 @@ img {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-card:hover,
-.link-card:focus {
+.link-card:hover, .link-card:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.link-card:hover .text-overlay,
+.link-card:focus .text-overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .card-overlay {
@@ -1182,12 +1184,6 @@ img {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-card:hover .text-overlay,
-.link-card:focus .text-overlay {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .paragraph {
