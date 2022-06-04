@@ -8,21 +8,7 @@
     align-items: center;
 }
 
-.logo {
-    color: var(--color-hover);
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-
-    margin-right: 93px;
-}
-
-.logo__text--black {
-    color: var(--studio-color);
-}
-
-/* header nav */
+// header nav
 
 .navigation__list {
     display: flex;
@@ -85,7 +71,7 @@
     }
 }
 
-  /* contacts */
+// contacts
 
 .header-contacts {
     display: flex;
