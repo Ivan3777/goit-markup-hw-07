@@ -800,14 +800,16 @@ img {
   background-color: #2196f3;
 }
 
+.social-link:hover:hover .social-icon,
+.social-link:hover:focus .social-icon, .social-link:focus:hover .social-icon,
+.social-link:focus:focus .social-icon {
+  fill: #ffffff;
+}
+
 .social-icon {
   fill: #afb1b8;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-icon:hover, .social-icon:focus {
-  fill: #ffffff;
 }
 
 .subtitle-clients {

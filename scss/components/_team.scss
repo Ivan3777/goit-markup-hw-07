@@ -81,6 +81,10 @@
     &:hover,
     &:focus {
     background-color: #2196f3;
+    &:hover .social-icon,
+    &:focus .social-icon{
+        fill: #ffffff; 
+    }
 }
 }
 
@@ -99,8 +103,8 @@
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover,
-    &:focus {
-        fill: #ffffff; 
-    }
+    // &:hover,
+    // &:focus {
+    //     fill: #ffffff; 
+    // }
 }
